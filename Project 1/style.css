@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: green;
+    --error-color: orangered;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px 0 20px;
+}
+
+.form {
+    padding: 10px 20px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    font-size: 14px;
+    padding: 5px 0px;
+    font-weight: bolder;
+}
+
+.form-control input {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    outline: 0;
+    border: 1px solid black;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border:2px solid black;
+}
+
+.form-control small {
+    color: var(--error-color);
+    font-weight: bolder;
+    position: absolute;
+    padding-top: 3px;
+    visibility: hidden;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: cadetblue;
+}
+
+.form-control.error input{
+    border:2px solid var(--error-color);
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control.success input{
+    border:2px solid var(--success-color);
+}
+
+.form-control.success small {
+    visibility: hidden;
+}
