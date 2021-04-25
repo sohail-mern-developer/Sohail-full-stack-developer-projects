@@ -23,23 +23,21 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-// fUNCTION TO CHECK IF REQUIRED field have data
+// Check if require field have data
 
 function checkRequired(inputArray) {
     inputArray.forEach(function(input) {
         if(input.value === '') {
-            showError(input, `${getFieldId(input)} is required`);
+            console.log(input.id);
+            showError(input, `${input.id} is required`);
         } else {
             showSuccess(input);
         }
+
     });
 }
 
-// Function to get the idof input field
-
-function getFieldId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
+//
 
 // add event listner
 
@@ -47,5 +45,4 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     checkRequired([username,email,password,password2]);
-   
 });
