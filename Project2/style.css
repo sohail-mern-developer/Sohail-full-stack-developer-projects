@@ -5,39 +5,56 @@
 }
 
 body {
-    background-color: slategray;
-    font-family: 'Source Sans Pro', sans-serif;
+    background-color: gray;
     display: flex;
     flex-direction: column;
-    color: white;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    font-weight: bold;
+}
+
+
+.container {
+    perspective: 900px;
+    margin-bottom: 30px ;
 }
 
 .movie-container {
-    margin: 20px 0;
+    margin: 0px 0;
+}
+
+.movie-container {
+    margin: 15px 0;
 }
 
 .movie-container select {
     border: 0;
     border-radius: 5px;
     font-size: 15px;
-    margin-left: 10px;
-    padding: 5px 15px 5px 15px;
+    background: white;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+    padding: 3px 10px;
 }
 
 .seat {
+    height: 40px;
+    width: 50px;
     background-color: darkgray;
-    height: 22px;
-    width: 25px;
     margin: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 60px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 60px;
 }
 
 .seat.selected {
@@ -45,65 +62,30 @@ body {
 }
 
 .seat.occupied {
-    background-color: white;
-}
-
-.seat:nth-of-type(2) {
-    margin-right: 20px;
-}
-
-.seat:nth-last-of-type(2) {
-    margin-left: 20px;
-}
-
-.seat:not(.occupied):hover {
-    cursor: pointer;
-    transform: scale(1.2);
+    background-color: chocolate;
 }
 
 .legend {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
     list-style: none;
     display: flex;
 }
 
 .legend li {
     display: flex;
-    list-style: none;
-    margin: 0 10px;
+    margin-left: 10px;
     align-items: center;
     justify-content: center;
 }
 
-.legend .seat:not(.occupied):hover {
-    cursor: default;
-    transform: scale(1);
-}
-
-.legend li small {
-    margin-left: 5px;
-}
-
-.container {
-    perspective: 900px;
-    margin-bottom: 30px;
-}
-
 .screen {
-    background-color: white;
-    height: 70px;
+    height: 90px;
     width: 100%;
-    margin: 20px 0;
+    background-color: white;
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-}
-
-p.text span {
-    color: aqua;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .row {
