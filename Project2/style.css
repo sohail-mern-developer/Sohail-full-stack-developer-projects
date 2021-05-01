@@ -41,20 +41,20 @@ body {
 }
 
 .seat {
-    height: 40px;
-    width: 50px;
+    height: 20px;
+    width: 25px;
     background-color: darkgray;
-    margin: 3px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin: 2px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .seat:nth-of-type(2) {
-    margin-right: 60px;
+    margin-right: 30px;
 }
 
 .seat:nth-last-of-type(2) {
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .seat.selected {
