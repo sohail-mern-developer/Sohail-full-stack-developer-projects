@@ -49,6 +49,11 @@ body {
     border-top-right-radius: 7px;
 }
 
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 .seat:nth-of-type(2) {
     margin-right: 30px;
 }
@@ -70,6 +75,11 @@ body {
     padding: 5px;
     list-style: none;
     display: flex;
+}
+
+.legend .seat {
+    transform: scale(1);
+    cursor: default;
 }
 
 .legend li {
