@@ -34,3 +34,19 @@ h1 {
     border-bottom-right-radius: 7px;
 }
 
+.controls .btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: turquoise;
+}
+
+.controls .timestamp {
+    font-weight: bold;
+}
+
+@media(max-width:800px) {
+    .screen, .controls {
+        width: 90%;
+    }   
+}
