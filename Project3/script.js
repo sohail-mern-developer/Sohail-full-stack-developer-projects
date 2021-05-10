@@ -19,7 +19,7 @@ function updatePlayIcon() {
     if(video.paused) {
         play.innerHTML = '<i class="fab fa-google-play fa-2x"></i>'
     } else {
-        play.innerHTML = '<i class="fab fa-google-pause fa-2x"></i>';
+        play.innerHTML = '<i class="fas fa-pause fa-2x"></i>';
     }
 }
 
