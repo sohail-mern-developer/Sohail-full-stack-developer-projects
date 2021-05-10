@@ -39,10 +39,15 @@ h1 {
     border: 0;
     cursor: pointer;
     color: turquoise;
+    height: 40px;
+    width: 40px;
+    border: 1px solid red;
 }
+
 
 .controls .timestamp {
     font-weight: bold;
+    margin-left: 10px;
 }
 
 @media(max-width:800px) {
