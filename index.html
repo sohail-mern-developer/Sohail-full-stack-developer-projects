@@ -4,15 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Projects</title>
 </head>
 <body>
     <h1>Javascript Projects</h1>
-    <ol>
-        <li><a href="Project1/index.html">Project 1 - Sign Up Form</a></li>
-        <li><a href="Project2/index.html">Project 2 - Seat Selection At Movie Theatre</a></li>
-        <li><a href="Project3/index.html">Project 3 - Custom Video Player</a></li>
-        <li><a href="Project4/index.html">Project 3 - Exchange Rates Calculator</a></li>
-    </ol>
+    <h4><a href="https://github.com/sohaillll/Sohail-full-stack-developer-projects" target="_blank">Goto My Repository</a></h4>
+    <div class="container">
+    <ul>
+        <li class="projects"><a href="Project1/index.html">Project 1 - Sign Up Form</a>
+            <ul>
+                <li>Check required, length, email and password match</li>
+                <li> Create form UI </li>
+                <li> Show error messages under speciﬁc inputs </li>
+                <li> checkRequired() to accept array of inputs </li>
+                <li> checkLength() to check min and max length </li>
+                <li> checkEmail() to validate email with regex </li>
+                <li> checkPasswordsMatch() to match conﬁrm password</li>
+            </ul>
+        </li>
+        
+        <li class="projects"><a href="Project2/index.html">Project 2 - Seat Selection At Movie Theatre</a>
+            <ul>
+                <li>Select from movie choices and seats in a theater in order to purchase tickets</li>
+                <li> Display UI with movie select, screen, seats, legend & seat info</li>
+                <li> User can select a movie/price </li>
+                <li> User can select/deselect seats </li>
+                <li> User can not select occupied seats </li>
+                <li> Number of seats and price will update </li>
+                <li> Save seats, movie and price to local storage so that UI is still populated on refresh</li>
+            </ul>
+        </li>
+        
+        <li class="projects"><a href="Project3/index.html">Project 3 - Custom Video Player</a>
+            <ul>
+                <li>Custom video player using the HTML5 video element and it's JavaScript API with a custom design</li>
+                <li> Display custom video player styled with CSS </li>
+                <li> Play/pause </li>
+                <li> Stop </li>
+                <li> Video progress bar </li>
+                <li> Set progress bar time </li>
+                <li> Display time in mins and seconds</li>
+
+            </ul>
+        </li>
+        
+        <li class="projects"><a href="Project4/index.html">Project 4 - Exchange Rates Calculator</a>
+            <ul>
+                <li>Select countries to get the exchange rate for a speciﬁc amount</li>
+                <li> Display UI with 2 select lists for countries and 2 inputs for amounts </li>
+                <li> Fetch exchange rates from API (https://api.exchangerate-api.com) </li>
+                <li> Display the values for both countries </li><
+                    li> Update values on amount change </li>
+                    <li> Swap country rates</li>
+
+            </ul>
+        </li>
+    </ul>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
