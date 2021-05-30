@@ -25,18 +25,30 @@ function updatePlayIcon() {
 
 // Create function for update progress
 function updateProgress() {
-    return true;
+    //progress.value = (video.currentTime / video.duration) * 100;
+
+    let mins = Math.floor(video.currentTime / 60);
+    if(mins < 10) {
+        mins = '0' + String(mins);
+    }
+
+    let secs = Math.floor(video.currentTime % 60);
+    if(secs < 10) {
+        secs = '0' + String(secs);
+    }
+    timestamp.innerHTML = `${mins}:${secs}`;
 }
 
 // create function to stop the video
 function stopVideo() {
     video.currentTime = 0;
     video.pause();
+    progress.value = 0;
 }
 
 // create function to update the video progress using the slider
 function setVideoProgress() {
-    return true;
+    video.currentTime = (+progress.value  / video.duration) * 100;
 }
 
 // Event Listneres
@@ -44,7 +56,7 @@ function setVideoProgress() {
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('play', updatePlayIcon);
-video.addEventListener('timestamp', updateProgress);
+video.addEventListener('timeupdate', updateProgress);
 
 // 2- Evenr listner for Play button
 play.addEventListener('click', toggleVideoStatus);
