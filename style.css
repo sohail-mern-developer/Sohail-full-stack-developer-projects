@@ -48,6 +48,7 @@ ul {
     background-color: lightgreen;
     border: 1px solid green;
     border-radius: 5px;
+    width: 400px;
 }
 
 .container ul li:hover {
