@@ -11,20 +11,21 @@ function calculate() {
     // Get the Currency Code for currency 1 and 2
     const currencyOneCode = currencyOne.value;
     const currencyTwoCode = currencyTwo.value;
+    console.log(currencyOneCode, currencyTwoCode);
 
     // Send Request to ExchangeRate-API for conversion rates for currency one
     fetch(`https://v6.exchangerate-api.com/v6/a43d02c063c1303f1c06c071/pair/${currencyOneCode}/${currencyTwoCode}`)
            
         .then(res => res.json())
         .then(data => {
-            console.log(data.conversion_rate);
+            console.log(data);
             // Get the Conversion Rate from Currency One to Currency Two
             const conversionRate = data.conversion_rate;
             // Update the DOM to display the conversion rate
             rate.innerText = `1 ${currencyOneCode} = ${conversionRate} ${currencyTwoCode}`;
             // Formatting Currency Two Amount
             const amount2 = new Intl.NumberFormat().format((amountCurrencyOne.value * conversionRate).toFixed(2));
-            console.log(amount2);     
+            //console.log(amount2);     
             // Updating DOM
             amountCurrencyTwo.value = amount2;
         });
