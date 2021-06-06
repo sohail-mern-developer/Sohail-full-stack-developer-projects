@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Landing Page</title>
+</head>
+<body>
+    <!--Left Navigation-->
+    <nav>
+        <div class="logo">
+            <img src="img/IMG_1983.JPG" alt="">
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--Header Navigagtion-->
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fas fa-align-justify fa-2x"></i>
+        </button>
+
+        <h1>My Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi commodi temporibus amet, quae aliquam quam?</p>
+        <button class="su-btn" id="open">Sign Up</button>
+    </header>
+
+    <!--Main body-->
+
+    <div class="container">
+
+        <h2>My Career</h2>
+        <p>To seek a challenging, developing and career oriented position, with the opportunity to utilize my best capabilities in collective personal, organizational and social growth as a whole and serve the organization with sincerity and professional commitment.</p>
+
+        <h2>My Projects</h2>
+
+        <ul>
+            <li>Sign Up Form</li>
+            <li>Movie Theatre</li>
+            <li>Video Player</li>
+            <li>Calculating Exchange Rates</li>
+            <li>DOM Array Methods</li>
+        </ul>
+    </div>
+    
+    <!--modal-->
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <div class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="modal-header">
+                Sign Up For Free
+            </div>
+    
+                <form class="modal-form" action="">
+                <div class="formEl">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter Name" />
+                </div>
+                <div class="formEl">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter Email" />
+                </div>
+                <div class="formEl">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" />
+                </div>
+                <div class="formEl">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" id="password2" placeholder="Confirm Password" />
+                </div>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
