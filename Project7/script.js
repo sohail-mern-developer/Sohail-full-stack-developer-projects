@@ -5,7 +5,7 @@ const finalMessage = document.getElementById('final-message');
 const popup = document.getElementById('popup-container');
 const playBtn = document.getElementById('play-btn');
 
-const figureParts = document.querySelectorAll('figure-part');
+const figureParts = document.querySelectorAll('.figure-part');
 
 const words = ["sohail","aqib"];
 
@@ -70,8 +70,47 @@ window.addEventListener('keydown', e => {
     }
 });
 
+// Function to update incorrect letters
+function updateIncorrectLetters() {
+    // Display the Incorrect letters 
+    incorrectLetters.innerHTML = `
+        ${incorrectLettersArray.length > 0 ? '<h3>Incorrect Letters</h3>' : ''}
+        ${incorrectLettersArray.map(letter => `<span>${letter}</span>`)}
+            
+    `;
+
+    // Display the hangman part
+    
+    figureParts.forEach((part, index) => {
+        const errors = incorrectLettersArray.length;
+        if (index < errors) {
+            part.style.display = 'block';
+        } else {
+            part.style.display = 'none';
+        }
+    });
+
+    // if lost
+
+    if(incorrectLettersArray.length === figureParts.length) {
+        finalMessage.innerText = 'You Lost';
+        popup.style.display = 'flex';
+    }
+}
+
+// Event Listners
+// 1 - Listen for click Play Button
+
 playBtn.addEventListener('click', e => {
     correctLettersArray.splice(0);
+    incorrectLettersArray.splice(0);
+
+    selectedWord = words[Math.floor(Math.random() * words.length)];
+
+    updateIncorrectLetters();
+
+    popup.style.display = 'none';
+    displayWord();
 });
 
 displayWord();
