@@ -1,7 +1,13 @@
-const conntainer = document.querySelector('.container');
+const menuToggle = document.getElementById('toggle');
+const close1 = document.getElementById('close');
+const open1 = document.getElementById('open');
+const modal = document.getElementById('modal');
 
-conntainer.addEventListener('click', e => {
-    if(e.target.classList.contains('projects')) {
-        e.target.classList.add('show');
-    }
+menuToggle.addEventListener('click', e => {
+    document.body.classList.toggle('show-nav');
 });
+
+
+open1.addEventListener('click', () => modal.classList.add('show-modal') );
+
+close1.addEventListener('click', () => modal.classList.remove('show-modal') );

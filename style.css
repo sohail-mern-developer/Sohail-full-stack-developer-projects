@@ -1,81 +1,196 @@
+:root {
+    --modal-duration: 1s;
+    --primary-color: #33FF93;
+    --secondary-color:#205E07;
+}
+
 * {
     box-sizing: border-box;
 }
+
 body {
-    background-color: #74992e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-color: var(--primary-color);
+    margin: 0;
+    transition: transform 0.5s ease;
 }
 
-h1,h4 {
+body.show-nav {transform: translateX(230px);
+
+}
+
+nav {
+    background-color: var(--secondary-color);
+    border-right: 1px solid var(--primary-color);   
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 230px;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .logo {
+    padding: 30px 0;
     text-align: center;
-    margin-top: 10px ;
 }
 
-h4 {
-    margin-top: 12px;
+nav .logo img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
 }
 
-h4 a{
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 2px solid rgba(200,200,200,0.1);
+    padding: 20px;
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(200,200,200,0.1);
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: black;
-    margin-top: 10px;
 }
 
-.container {
-    width: 400px;
-    text-align: start;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: lightcyan;
+    font-size: 120%;
+    padding: 20px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    padding: 0;
     margin: 0;
-    padding: 0;
 }
 
-ul {
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    padding: 0;
+.toggle {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 20px;
 }
 
-.container ul li {
-    list-style: none;
-    font-weight: bolder;
-    padding: 7px 12px;
-    background-color: lightgreen;
-    border: 1px solid green;
-    border-radius: 5px;
-    width: 400px;
-}
-
-.container ul li:hover {
-    background: lightgrey;
-}
-
-.container ul li a{
-    text-decoration: none;    
-    color: black;
-}
-
-.container ul li ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    visibility: hidden;
-    height: 0px;
-}
-
-. .show {
-    visibility: visible;
-}
-
-ul li ul li {
+.su-btn {
+    padding: 10px 20px;
     font-weight: bold;
-    border: none;
-    background-color: green;
-    width: 100%;
-    margin: 0;
+    background-color: var(--primary-color);
+    border: 0;
+    outline: 0;
 }
+
+.su-btn:active {
+    transform: scale(0.95);
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.close-btn {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.fa {
+    margin-right: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.modal-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+
+
+.modal-container.show-modal{
+    display: block;
+}
+
+.modal {
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    max-width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation-name: modal-open;
+    animation-duration: var(--modal-duration);
+    font-weight: bold;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+
+
+
+.modal-form {
+    padding: 20px;
+}
+
+.modal-header {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.modal div.formEl {
+    margin: 18px 12px;
+}
+
+.modal div.formEl label {
+    display: block;
+}
+
+.modal div.formEl input {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+}
+
+.modal div.formEl input:focus {
+    outline: 0;
+}
+
+.submit-btn {
+    padding: 5px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    outline: 0;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+
+
+
