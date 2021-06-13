@@ -191,6 +191,24 @@ header h1 {
     color: whitesmoke;
 }
 
+.container ul {
+    list-style-type: none;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
 
 
 
