@@ -3,8 +3,8 @@
 }
 
 body {
-    background-color: darkgreen;
-    color: white;
+    background:fixed linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -60,6 +60,7 @@ input[type='text'] {
     grid-gap: 20px;
     margin: 0;
     margin-top: 20px;
+    margin-bottom: 200px;
 }
 
 .meal {
@@ -69,6 +70,8 @@ input[type='text'] {
     width: 180px;
     border: 2px solid white;
     border-radius: 5px;
+    color: wheat;
+    
 }
 
 .meal-info {
@@ -93,6 +96,10 @@ input[type='text'] {
 .meal img {
     width: 100%;
     height: 100%;
+}
+
+.hide {
+    margin-top: -200px;
 }
 
 @media(max-width: 500px) {
