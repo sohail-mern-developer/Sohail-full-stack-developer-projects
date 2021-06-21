@@ -4,51 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Meal Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Food Selection</title>
 </head>
 <body>
+    
     <div class="container">
-        <h1>Meal Generator</h1>
+        <h2>Meal Generator</h2>
         <div class="flex">
-
-            <!--Search Form-->
-            <form class="flex" id="submit">
-                <input type="text" id="search" placeholder="Search" />
-                <button class="search-btn" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+            <form id="submit">
+                <input type="text" id="search" placeholder="Search">
+                <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
             </form>
 
-            <!--Random Meal Generator Button-->
-            <button class="generate-btn" id="generate">
+            <!--Random meal generator button-->
+            <button id="generate" class="generate-btn">
                 <i class="fas fa-random"></i>
             </button>
-        </div>
-        
-        
-            <!-- Heading for the search results -->
-            <div class="results-heading" id="results-heading"></div> 
 
-            <!-- Div to contain the meal from API -->
-            <div class="meals" id="meals"></div>
-            <div class="hide">
-                <!-- Detail of Selected Meal -->
-                <div class="selected-meal" id="selected-meal"></div>
-            </div>
-            </div>
+        </div>
+
+            <!-- Heading for the search results -->
+        <div id="results-heading"></div>
+
+        <!-- Div to contain the meals returned from API -->
+        <div class="meals" id="meals"></div>
+
+        <!-- Details of selected meal -->
+        <div id="selected-meal"></div>
+
+        <div class="bottom"><p>All rights reserved.</p></div>
+
     </div>
+    
     <script src="script.js"></script>
-    <a href="../index.html" style="width: 100%; display: block; position: fixed; bottom: 10px; font-weight: bolder; text-align: center;">Back to Home</a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
