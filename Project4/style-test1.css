@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    width: 600px;
+    min-height: 100px;
+    border-radius: 12px;
+    display: flex;
+    margin: 0 auto;
+    border-left: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    box-shadow: 10px 5px 9px rgb(0, 0, 0, 0.3);
+}
+
+.exchange-rate {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.from {
+    border-right: 1px solid black;
+    height: 85%;
+    width: 50%;
+}
+
+.to {
+    width: 50%;
+    height: 85%;
+}
+
+.detail {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+input, select {
+    width: 80%;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    padding: 7px;
+    outline: 0;
+    border: 1px solid black;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
