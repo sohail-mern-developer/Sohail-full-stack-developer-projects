@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(34,193,195);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;   
+}
+
+.container {
+    width: 320px;
+    margin: 0;
+}
+
+.credit-debit-container {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.credit-debit-container div {
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.credit-debit-container div:first-of-type {
+    border-right: 2px solid lightskyblue;
+}
+
+.credit {
+    border-right: 9px solid green;
+}
+
+.debit {
+    border-right: 9px solid red;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.list li {
+    background-color: white;
+    padding: 5px 6px;
+    font-weight: bolder;
+    margin-bottom: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.list li button {
+    position: absolute;
+    transform:translate(-100%, -50%);
+    left: 0;
+    top: 50%;
+    padding: 3px 7px;
+    cursor: pointer;
+    background-color: red;
+    font-weight: bolder;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.list li:hover {
+    transform: scale(1.1);    
+}
+
+.list li:hover .delete-btn{
+    opacity: 1;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+input {
+    display: block;
+    padding: 7px;
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 80px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    background: transparent;
+}
+
+
+
+
+
