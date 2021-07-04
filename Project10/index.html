@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music Player</title>
+</head>
+<body>
+    <h1>Music Player</h1>
+    
+    
+    <!--Container for music player-->
+    <div class="container play" id="container">
+        <!--Container for information about current song-->
+        
+        <div class="info">
+            <!--Placeholder: Name of current song will be added here-->
+            <h4 id="song-title">Panda</h4>
+            <!--Progress bar showing progress of playback of current song-->
+            <div class="progress" id="progress"></div>
+        
+        
+        </div>
+        
+        
+        <!--This is the actual audio player-->
+        <audio src="music/Panda.mp3" id="audio"></audio>
+        
+        <!-- Album art -->
+            <div class="album-art">
+                <img src="images/panda.jpg" alt="album-art" id="album-art" />
+            </div>
+        
+        
+            <!-- Navigation button to change song -->
+        <div class="nav">
+            <!-- Previous button -->
+                <button class="nav-btn" id="previous">
+                    <i class="fas fa-backward"></i>
+                </button>
+                
+            <!-- Play / pause button -->
+                <button class="nav-btn nav-btn-large" id="play">
+                    <i class="fas fa-play"></i>
+                </button>
+        
+            <!-- Next button -->
+            <button class="nav-btn" id="next">
+                <i class="fas fa-forward"></i>
+            </button>
+        
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
