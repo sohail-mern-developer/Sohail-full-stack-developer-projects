@@ -3,8 +3,8 @@
 }
 
 body {
-    background-color: silver;
-    min-height: 100vh;
+    background-color: #BDD5EA;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,25 +16,26 @@ body {
     background-color: white;
     border-radius: 10px;
     display: flex;
-    position: relative;
     padding: 20px;
-    margin: 100px 0;
+    position: relative;
+    margin: 100px, 0;
     z-index: 10;
 }
 
 .album-art {
     position: relative;
-    width: 200px;
+    width: 150px;
 }
 
 .album-art img {
     border-radius: 50%;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
+    object-fit: cover;
     height: 120px;
     width: 120px;
-    animation: rotate 5s linear infinite;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
     animation-play-state: paused;
 }
 
@@ -46,42 +47,50 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
     z-index: 1;
 }
 
-.nav .nav-btn {
+.nav-btn {
     background-color: white;
-    margin: 0 5px;
-    border: none;
-    font-size: 16px;
+    border: 0;
+    color: #495867;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 18px;
     cursor: pointer;
 }
 
-.nav .nav-btn-large {
+.nav-btn-large {
     font-size: 24px;
 }
 
 .info {
-    height: 60px;
-    background-color: darkolivegreen;
+    background-color: blue;
     border-radius: 10px;
     position: absolute;
-    width: 90%;
-    text-align: right;
-    margin: 0;
-    padding: 0 20px;
-    color: white;
-    font-weight: bolder;
+    top: 0px;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
     transform: translateY(0%);
     transition: transform 1s ease-in, opacity 1s ease-in;
     opacity: 0;
     z-index: 0;
+    color: white;
 }
 
 .container.play .info {
     opacity: 1;
-    transform: translateY(-120%);
+    transform: translateY(-100%);
+}
+
+.info h4 {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 100px;
 }
 
 .progress {
@@ -90,19 +99,19 @@ body {
     cursor: pointer;
     margin: 10px 0;
     height: 5px;
-    width: 50%;
-    text-align: right;
-    margin-left: 140px;
-    margin-top: -15px;
+    width: 100%;
 }
 
 .progress-bar {
-    background-color: lightgreen;
+    background-color: #7f95a8;
     border-radius: 5px;
     height: 100%;
-    width:  0%;
+    width: 0%;
     transition: width 0.1s linear;
 }
+
+
+
 
 @keyframes rotate {
     from {
