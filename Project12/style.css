@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4096ee+0,4096ee+100;Blue+Flat+%232 */
+background: #4096ee; /* Old browsers */
+background: -moz-linear-gradient(top,  #4096ee 0%, #4096ee 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #4096ee 0%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #4096ee 0%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button.settings-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.settings {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#88bfe8+0,70b0e0+100;Blue+3D+%2317 */
+background: #88bfe8; /* Old browsers */
+background: -moz-linear-gradient(top,  #88bfe8 0%, #70b0e0 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #88bfe8 0%,#70b0e0 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #88bfe8 0%,#70b0e0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', endColorstr='#70b0e0',GradientType=0 ); /* IE6-9 */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    border-radius: 0 0 14px 14px;
+    transform: translateY(0);
+    transition: transform 0.7s ease-in-out;
+}
+
+.settings.hide {
+    transform: translateY(-100%);
+}
+
+.settings select {
+    width: 200px;
+    padding: 4px 2px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 70px;
+    width: 350px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a7c7dc+0,85b2d3+100;Blue+Grey+3D */
+background: #a7c7dc; /* Old browsers */
+background: -moz-linear-gradient(top,  #a7c7dc 0%, #85b2d3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
+
+}
+
+.container input {
+    width: 220px;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.container input:focus {
+    outline: 0;
+}
+
+.gameover {
+       /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4096ee+0,4096ee+100;Blue+Flat+%232 */
+background: #4096ee; /* Old browsers */
+background: -moz-linear-gradient(top,  #4096ee 0%, #4096ee 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #4096ee 0%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #4096ee 0%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */ 
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: none;
+}
+
+.playagain {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 9px;
+    cursor: pointer;
+    margin-top: 30px;    
+}
+
+
+

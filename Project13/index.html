@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Memory Cards</title>
+</head>
+<body>
+    <h1>Memory Cards
+
+        <!-- Button for Create new card -->
+        <button id="add-card" class="btn small-btn">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        
+        <!-- Button for remove existing cards -->
+        <button id="clear-cards" class="btn small-btn">
+            <i class="fas fa-trash"></i>
+        </button>
+    </h1>
+
+    <!-- Container for cards, can have multiple cards -->
+    <div class="cards-container" id="cards-container">
+        
+        <!-- Example card 1 -->
+        <div class="card active">
+            <div class="inside-card">
+                <!-- Front of card -->
+                <div class="card-front">
+                    <p>Question 1</p>
+                </div>
+                <!-- back of card -->
+                <div class="card-back">
+                    <p>Answer 1</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example card 2 -->
+        <div class="card">
+            <!-- Front of card -->
+            <div class="card-front">
+                <p>Question 2</p>
+            </div>
+            <!-- back of card -->
+            <div class="card-back">
+                <p>Answer 2</p>
+            </div>
+        </div>
+
+        <!-- Example card 3 -->
+        <div class="card">
+            <!-- Front of card -->
+            <div class="card-front">
+                <p>Question 3</p>
+            </div>
+            <!-- back of card -->
+            <div class="card-back">
+                <p>Answer 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation to change card -->
+    <div class="nav">
+        <!-- Button to go to the previous card -->
+        <button class="btn-nav" id="prev-btn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <!-- Current card info -->
+        <p id="current-card"></p>
+        
+        <!-- Button to go to the next card -->
+        <button class="btn-nav" id="next-btn">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <!-- Button to create the new card -->
+    <div class="add-card-container" id="add-card-container">
+        <h1>Add New Card
+            <!-- Button to cancel to creating a new card -->
+            <button class="btn small-btn" id="cancel-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </h1>
+
+        <!-- Add card form -->
+        <!-- Question -->
+        <div class="add-card-form-group">
+            <label for="question">Question</label>
+            <textarea id="question" class="question-input" placeholder="Enter Question"></textarea>
+        </div>
+
+
+        <!-- Answer -->
+        <div class="add-card-form-group">
+            <label for="answer">Answer</label>
+            <textarea id="answer" class="answer-input" placeholder="Enter Answer"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" id="add-card-btn">
+            Add Card
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
